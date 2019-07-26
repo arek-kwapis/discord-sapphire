@@ -53,7 +53,7 @@ function processCommand(receivedMessage) {
 	console.log("Arguments: " + arguments)
 
 	////////
-	// COMMAND WALL WHICH IS UGLY AS SIN
+	// MOVE ALL TO SEPERATE FILES
 	////////
 
 	// help
