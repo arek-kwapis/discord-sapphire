@@ -56,18 +56,18 @@ function processCommand(receivedMessage) {
 	// MOVE ALL TO SEPERATE FILES
 	////////
 
-	// help
+	// Help command
 	if (primaryCommand == "help") {
 		helpCmd(arguments, receivedMessage)
 	}
-	// me
+	// Ping status control
 	else if (primaryCommand == "ping") {
 		pingCmd(arguments, receivedMessage)
 	}
 	else if (primaryCommand == "debug") {
 		debugCmd(arguments, receivedMessage)
 	}  
-	// please
+	// Unknown command was entered
 	else {
 		receivedMessage.channel.send("Oh, either you made a typo or that's not a command! \nUse `-.help` for a list of commands")
 	}
