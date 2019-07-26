@@ -1,0 +1,14 @@
+{
+	"name": "discord-sapphire",
+	"version": "0.0.2",
+	"description": "CHANGE ME",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js"
+	},
+	"author": "Arek \"AGDeveloper\" Kwapis",
+	"license": "SEE LICENSE IN license.md",
+	"dependencies": {
+		"discord.js": "^11.5.1"
+	}
+}
