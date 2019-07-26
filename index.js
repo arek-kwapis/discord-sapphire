@@ -15,8 +15,11 @@ const Discord = require('discord.js')
 const client = new Discord.Client()
 //import fs from 'fs';
 const authKey = require ("./auth.json")
+const packFile = require ("./package.json")
+const config = require ("./config.json")
 
-// Vars
+// Variables
+let cmdPrefix = config.prefix
 var dateNow = Date(Date.now()).toString()
 
 // Rich Presence config thingy
@@ -35,7 +38,7 @@ client.on('message', (receivedMessage) => {
 		return
 	}
 	// Set command prefix
-	if (receivedMessage.content.startsWith('-.')) {
+	if (receivedMessage.content.startsWith(cmdPrefix)) {
 		console.log("DEBUG: Preparing to process input: ", receivedMessage)
 		processCommand(receivedMessage)
 	}
@@ -64,9 +67,14 @@ function processCommand(receivedMessage) {
 	else if (primaryCommand == "ping") {
 		pingCmd(arguments, receivedMessage)
 	}
+	// Debug
 	else if (primaryCommand == "debug") {
 		debugCmd(arguments, receivedMessage)
-	}  
+	} 
+	// Info
+	else if (primaryCommand == "info") {
+		infoCmd(receivedMessage)
+	}
 	// Unknown command was entered
 	else {
 		receivedMessage.channel.send("Oh, either you made a typo or that's not a command! \nUse `-.help` for a list of commands")
@@ -97,6 +105,11 @@ function pingCmd(arguments, receivedMessage) {
 	console.log("DEBUG: pingCMD has completed")
 }
 
+function infoCmd(receivedMessage) {
+	receivedMessage.channel.send("**Sapphire Bot Info** \nCreated by: *Arek 'AGDeveloper' Kwapis* \nBot Version: *" + packFile.version + "*")
+}
+
+// Debug
 function debugCmd(arguments, receivedMessage) {
 	if (arguments.length == 0) {
 		receivedMessage.channel.send("Debug Usage Feature WIP!")
