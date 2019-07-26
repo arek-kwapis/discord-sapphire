@@ -13,9 +13,10 @@
 // Imports
 const Discord = require('discord.js')
 const client = new Discord.Client()
+//import fs from 'fs';
+const authKey = require ("./auth.json")
 
 // Vars
-var CliSecret = "NjA0MTA4MzY2NTU3NDc4OTQy.XTpr3Q.LqckmDT86fnihdzOhIcyVSDLYDI"
 var dateNow = Date(Date.now()).toString()
 
 // Rich Presence config thingy
@@ -34,7 +35,7 @@ client.on('message', (receivedMessage) => {
 		return
 	}
 	// Set command prefix
-	if (receivedMessage.content.startsWith("-.")) {
+	if (receivedMessage.content.startsWith('-.')) {
 		console.log("DEBUG: Preparing to process input: ", receivedMessage)
 		processCommand(receivedMessage)
 	}
@@ -105,7 +106,7 @@ function debugCmd(arguments, receivedMessage) {
 			receivedMessage.channel.send("Restarting client, please wait...")
 			client.destroy() // Close client
 			console.log("DEBUG: Destroyed client")
-			client.login(CliSecret)
+			client.login(authKey.token)
 			console.log("DEBUG: Logged into Discord on ", dateNow)
 			// Send message on REAL ready
 			client.on('ready', () => {
@@ -118,5 +119,5 @@ function debugCmd(arguments, receivedMessage) {
 }
 
 // Login to client
-client.login(CliSecret)
+client.login(authKey.token)
 console.log("Logged into discord on ", dateNow)
