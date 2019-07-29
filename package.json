@@ -1,7 +1,7 @@
 {
 	"name": "discord-sapphire",
-	"version": "0.0.2",
-	"description": "CHANGE ME",
+	"version": "0.0.4",
+	"description": "N/A",
 	"main": "index.js",
 	"scripts": {
 		"start": "node index.js"
