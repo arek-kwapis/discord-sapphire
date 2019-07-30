@@ -24,17 +24,36 @@ Sapphire Bot | Created by: Arek "AGDeveloper" Kwapis­­
 
 ------------------------------------------------------------------------------------
 
+Version:			pre-0.1.0
+Build:				84
+Date Compiled:		30/07/2019
+Author:				Arek Kwapis (arek.kwapis@gmail.com)
+Branch:				beta
+Commits:			
+					
+Notes:				
+Changes:
+		+ New logging system
+		+ Build number tracking
+
+------------------------------------------------------------------------------------
+
 Version:			pre-0.0.4
 Build:				25
 Date Compiled:		29/07/2019
 Author:				Arek Kwapis (arek.kwapis@gmail.com)
 Branch:				beta
 Commits:			
-					cc47f1488b12eea136d1ec1ec5ebe09d7d5970a6
+					7cca97a455c1a642522eb951582f3e4d40b7b881
+					8e7378749be115cee0d41f85a23ed84b930ce90f
+					66172245feeb0c507c98c10ce3e5f8cf165e4b2a
 Notes:				
 Changes:
-		+ Removed modular command system
+		+ Added a 2 Dimensional Array to ConnectFour
+		+ Changed ConnectFour management system
+		+ Changed the ways certain handling functions process data
 		+ Fixed comments
+		- Removed modular command system
 
 ------------------------------------------------------------------------------------
 
