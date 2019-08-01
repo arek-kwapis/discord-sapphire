@@ -89,6 +89,11 @@ function dateNow() {
 	return Date(Date.now())
 }
 
+process.on('SIGINT', function() {
+	logMsg(0, 3, "nodejs -> shdown (SIGINT.EXIT)", "Recieved SIGINT signal and begging shutdown process")
+	botExit()
+});
+
 // Rich Presence config thingy
 client.on('ready', () => {
 	client.user.setActivity("Use -.help for comamnds!", {
@@ -114,6 +119,7 @@ client.on('message', (receivedMessage) => {
 // Shut the bot down
 function botExit() {
 	logMsg(0, 4, "debug -> shdown (botExit)", "Abrupt shut down is NOT recommended!")
+	logMsg(0, 6, "PROCESS.EXIT", "PROCESS WILL NOW EXIT")
 	process.exit(0)
 }
 
@@ -127,7 +133,7 @@ function processCommand(receivedMessage) {
 	primaryCommand = primaryCommand.toLowerCase()
 
 	// DEBUG: Tell me exactly what is happening
-	logMsg(receivedMessage, 2, "processCommand", "Processing input in recievedMessage with arguments")
+	logMsg(receivedMessage, 2, "processCommand", "Processing input in recievedMessage with arguments: " + arguments)
 
 	// Help command
 	if (primaryCommand == "help") {

@@ -28,9 +28,23 @@ Version:			pre-0.1.0
 Build:				84
 Date Compiled:		30/07/2019
 Author:				Arek Kwapis (arek.kwapis@gmail.com)
+Branch:				master
+Commits:			
+					562cbec567ae8451da9f5d51f9d6449dd720e6af
+Notes:				
+Changes:
+		+ Merge `beta` with `master` (pr #1)
+
+------------------------------------------------------------------------------------
+
+Version:			pre-0.1.0
+Build:				84
+Date Compiled:		30/07/2019
+Author:				Arek Kwapis (arek.kwapis@gmail.com)
 Branch:				beta
 Commits:			
-					
+					b643544dc07575e29f287f3626d98f3ffb1cc79a
+					562cbec567ae8451da9f5d51f9d6449dd720e6af
 Notes:				
 Changes:
 		+ New logging system
