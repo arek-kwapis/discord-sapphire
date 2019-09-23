@@ -10,16 +10,13 @@
 
 const Discord = require('discord.js')
 const client = new Discord.Client()
-const authKey = "NjA0MTA4MzY2NTU3NDc4OTQy.XTtl8g.owSdpabC3xxzIrFAEK8Qm0tkj28"
+const authKey = require('./auth.json')
 
 // Rich Presence config thingy
 client.on('ready', () => {
-	client.user.setActivity("Use -.help for comamnds!", {
-		type: "WATCHING"
+	client.user.setActivity("NOT READY YET!", {
+		type: "STREAMING"
 	})
-	console.log("This process will now crash with SIGINT")
-	client.destroy()
-	process.kill(process.pid, "SIGINT")
 })
 
 // Message Checks
@@ -33,4 +30,4 @@ client.on('message', (receivedMessage) => {
 	}
 })
 
-client.login(authKey)
+client.login(authKey.token)
