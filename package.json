@@ -1,0 +1,20 @@
+{
+	"name": "abstrat.sapphire.discord",
+	"version": "1.0.0",
+	"description": "N/A",
+	"main": "main.js",
+	"scripts": {
+		"start": "node monitor.js"
+	},
+	"author": "Arek \"AGDeveloper\" Kwapis",
+	"license": "SEE LICENSE IN license.md",
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/arek-kwapis/discord-sapphire.git"
+	},
+	"dependencies": {
+		"colors": "^1.3.3",
+		"discord.js": "^11.5.1",
+		"respawn": "^2.6.0"
+	}
+}

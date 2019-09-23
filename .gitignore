@@ -1,0 +1,8 @@
+# Ignore the auth key
+auth.json
+
+# Ignore workspace settings
+Sapphire.code-workspace
+
+# Stop analytics being uploaded
+analytics/
